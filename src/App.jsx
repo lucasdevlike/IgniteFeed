@@ -33,7 +33,7 @@ const posts = [
       { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
       { type: 'link', content: '👉 <a href="">jane.design/doctorcare</a>' },
     ],
-    publishedAt: new Date('20244-07-16 20:00:00'),
+    publishedAt: new Date('2024-07-16 20:00:00'),
   },
 ];
 
@@ -50,6 +50,7 @@ export function App() {
           {posts.map(post => {
             return (
               <Post
+                key={post.id}
                 author={post.author}
                 content={post.content}
                 publishedAt={post.publishedAt}
